@@ -27,17 +27,19 @@ hr{
 h1{
     text-align: center;
     color: white;
-    font-size: 52px;
+    font-size: 48px;
     font-family: 'Source Sans Pro', sans-serif;
     font-weight: bold;
     text-shadow: -1px -1px 1px #aaa,
+             1px 1px black,
              0px 4px 1px rgba(236, 236, 236, 0.5),
              4px 4px 5px rgba(202, 202, 202, 0.7),
              0px 0px 7px rgba(0,0,0,0.4);
     }
 h2{
+    display: block;
     color: white;
-    font-size: 32px;
+    font-size: 30px;
     font-family: 'Source Sans Pro', sans-serif;
     font-weight: bold;
     text-shadow: -1px -1px 1px #aaa,
@@ -60,7 +62,7 @@ p{
     background:transparent url('../images/Kaede.png') no-repeat;
     border: 0;
     overflow: hidden;
-    background-position: -3em;
+    background-position: -3em 1px;
 }
 .kirumi{
     height: 350px;
@@ -68,7 +70,7 @@ p{
     background:transparent url('../images/Kirumi.png') no-repeat;
     border: 0;
     overflow: hidden;
-    background-position: -2em;
+    background-position: -2em -6px;
 }
 .miu{
     height: 350px;
@@ -87,14 +89,14 @@ p{
     background-position: -3em 3px;
 }
 .character{
-    height: 300px;
+    height: 225px;
     font-family: 'Source Sans Pro', sans-serif;
     font-style: italic;
     display: inline-block;
     color: white;
     margin: 0px 2px 0px 2px;
     box-shadow: 0px 3px 8px #43484c;
-    font-size: 20px;
+    font-size: 24px;
     border-radius: 15px 15px 15px 15px;
     transition: background linear 0.33s;
     text-shadow: -1px -1px 1px #aaa,
@@ -119,6 +121,11 @@ p{
     bottom: 8px;
     left: 16px;
     position: absolute;
+    text-shadow: -1px -1px 1px #aaa,
+             1px 1px black,
+             0px 4px 1px rgba(236, 236, 236, 0.5),
+             4px 4px 5px rgba(202, 202, 202, 0.7),
+             0px 0px 7px rgba(0,0,0,0.4);
 }
 #attack{
     font-family: 'Source Sans Pro', sans-serif;
@@ -132,6 +139,7 @@ p{
     border-radius: 5px 5px 5px 5px;
     transition: background linear 0.2s;
     text-shadow: -1px -1px 1px #aaa,
+             1px 1px black,
              0px 4px 1px rgba(236, 236, 236, 0.5),
              4px 4px 5px rgba(202, 202, 202, 0.7),
              0px 0px 7px rgba(0,0,0,0.4);
@@ -146,4 +154,8 @@ p{
     }
 .clear{
     clear:both;
+}
+.row{
+    width: auto;
+    float: left;
 }
