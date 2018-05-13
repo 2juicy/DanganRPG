@@ -20,22 +20,25 @@ const Monokuma = {
     attack: 5,
     counter: 22,
     };
+var countSelect = 0;
+var countEnemy = 0;
 console.log(Kaede.health);
 console.log(Monokuma.attack);
 //Document check
 $(document).ready(function() {
     $('.enemy').hide();
+    $('.defender').hide();
     //functions
     
     
     //song ignore this it was just for fun lol
-    var audioElement = document.createElement("audio");
-        audioElement.setAttribute("src", "images/soundtrack.mp3");    
-    $(".column").on("click", "#character1", function() {
-          audioElement.play();
-        }).on("click", "#character2", function() {
-          audioElement.pause();
-        });
+    // var audioElement = document.createElement("audio");
+    //     audioElement.setAttribute("src", "images/soundtrack.mp3");    
+    // $(".column").on("click", "#character1", function() {
+    //       audioElement.play();
+    //     }).on("click", "#character2", function() {
+    //       audioElement.pause();
+    //     });
     
 
 
@@ -51,6 +54,9 @@ $(document).ready(function() {
     //on.click starts here for character selection, hides unselected characters.
     $(".container").on("click", ".select", function() {
     // $(".container").on("click", "#character1", function() {
+        if (countSelect === 1){
+            return;
+        }
         const hideChosen = function(x){
         if (x == 0){
             $('#enemy1').hide();
@@ -61,60 +67,43 @@ $(document).ready(function() {
         } else {
             $('#enemy4').hide();
         }}
-   		var userPick = $(this).val();
+   		let userPick = $(this).val();
         var characterSelected = characters[userPick];
         //hides unclicked buttons and keeps character selection.
-        $('.character').toggle();
+        $('.character').hide();
         $(this).show();
         //shows enemies
         $('.enemy').show();
         hideChosen(userPick);
         console.log(userPick);
         console.log(characterSelected);
+        countSelect++;
 
-        var characterBtn = $("<button>");
+    });// End of .on(click) function
 
+    $(".container").on("click", ".enemy", function() {
+        if (countEnemy === 1){
+            return;
+        }
+        $(this).hide();
+        const showChosen = function(x){
+        if (x == 0){
+            $('#defender1').show();
+        } else if (x == 1){
+            $('#defender2').show();
+        } else if (x == 2){
+            $('#defender3').show();
+        } else {
+            $('#defender4').show();
+        }}
+        let userPick = $(this).val();
+        showChosen(userPick);
+        countEnemy++;
+    // }).on("click", "#character2", function() {
+    //     }).on("click", "#character3", function() {
+    //         }).on("click", "#character4", function() {
 
-
-
-
-        
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-    }).on("click", "#character2", function() {
-        }).on("click", "#character3", function() {
-            }).on("click", "#character4", function() {
-
-
-
-
-
-
-
-});// End of .on(click) function
-
-
-
+    });// End of .on(click) function
 
 
     //Begin on.click section to attack.
@@ -135,14 +124,6 @@ $(document).ready(function() {
 
 
     });//end of attack click
-
-
-
-
-
-
-
-
 
 
 
