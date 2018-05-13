@@ -1,0 +1,103 @@
+*{
+	margin: 0;
+	padding: 0;
+    background: black;
+    }
+
+hr{
+    display: block;
+    height: 1px;
+    border:0;
+    border-top: 1px solid white; 
+    margin: 1em 0 1em 0;
+    padding: 0;
+    }
+h1{
+    color: white;
+    font-size: 52px;
+    font-family: 'Source Sans Pro', sans-serif;
+    font-weight: bold;
+    text-shadow: -1px -1px 1px #aaa,
+             0px 4px 1px rgba(236, 236, 236, 0.5),
+             4px 4px 5px rgba(202, 202, 202, 0.7),
+             0px 0px 7px rgba(0,0,0,0.4);
+    }
+p{
+    color: white;
+    font-size: 22px;
+    font-family: 'Source Sans Pro', sans-serif;
+    text-shadow: -1px -1px 1px #aaa,
+             0px 4px 1px rgba(236, 236, 236, 0.5),
+             4px 4px 5px rgba(202, 202, 202, 0.7),
+             0px 0px 7px rgba(0,0,0,0.4);
+}
+.character{
+    font-family: 'Source Sans Pro', sans-serif;
+    font-style: italic;
+    display: inline-block;
+    color: white;
+    margin: 0px 2px 0px 2px;
+    box-shadow: 0px 3px 8px #43484c;
+    font-size: 20px;
+    border-radius: 15px 15px 15px 15px;
+    transition: background linear 0.33s;
+    text-shadow: -1px -1px 1px #aaa,
+             0px 4px 1px rgba(236, 236, 236, 0.5),
+             4px 4px 5px rgba(202, 202, 202, 0.7),
+             0px 0px 7px rgba(0,0,0,0.4);
+    }
+.kaede{
+    height: 350px;
+    width: 225px;
+    background:transparent url('../images/Kaede.png') no-repeat;
+    border: 0;
+    overflow: hidden;
+    background-position: -3em;
+}
+.kirumi{
+    height: 350px;
+    width: 225px;
+    background:transparent url('../images/Kirumi.png') no-repeat;
+    border: 0;
+    overflow: hidden;
+    background-position: -2em;
+}
+.miu{
+    height: 350px;
+    width: 225px;
+    background:transparent url('../images/Miu.png') no-repeat;
+    border: 0;
+    overflow: hidden;
+    background-position: -2em;
+}
+.monokuma{
+    height: 350px;
+    width: 225px;
+    background:transparent url('../images/Monokuma.png') no-repeat;
+    border: 0;
+    overflow: hidden;
+    background-position: -3em;
+}
+.character:hover{
+    border: solid 2px white;
+    }
+
+.character:active {
+    background: white;
+    transform: translateY(3px);
+    }
+
+
+.container{
+    position: relative;
+    max-width: 1080px;
+    }
+.column{
+	float: left;
+    width: 100%;
+    box-sizing: border-box;
+   	padding: 20px;
+    margin: 15px 0px 15px 0px;
+    border: 1px solid white;
+    border-radius: 15px 15px 15px 15px;
+    }
