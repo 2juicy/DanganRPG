@@ -29,6 +29,12 @@ $(document).ready(function() {
     $('.enemy').hide();
     $('.defender').hide();
     //functions
+    function yourChar(health, attack, counter){
+        var yourPick = {};
+        yourPick.health = health;
+        yourPick.attack = attack;
+        yourPick.counter = counter;
+    }
     
     
     //song ignore this it was just for fun lol
@@ -40,12 +46,6 @@ $(document).ready(function() {
     //       audioElement.pause();
     //     });
     
-
-
-
-
-
-
 
 
 
@@ -69,6 +69,7 @@ $(document).ready(function() {
         }}
    		let userPick = $(this).val();
         var characterSelected = characters[userPick];
+        yourChar(characterSelected);
         //hides unclicked buttons and keeps character selection.
         $('.character').hide();
         $(this).show();
@@ -77,6 +78,7 @@ $(document).ready(function() {
         hideChosen(userPick);
         console.log(userPick);
         console.log(characterSelected);
+        console.log(yourChar);
         countSelect++;
 
     });// End of .on(click) function
