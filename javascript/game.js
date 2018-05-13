@@ -50,11 +50,11 @@ $(document).ready(function() {
 
 
     //on.click starts here for character selection, hides unselected characters.
-    $(".container").on("click", ".character", function() {
+    $(".container").on("click", ".select", function() {
     // $(".container").on("click", "#character1", function() {
    		var userPick = $(this).val();
-
-        $('.character').hide();
+        //hides unclicked buttons and keeps character selection.
+        $('.character').toggle();
         $(this).show();
         // $(this).hide();
         console.log(userPick);
