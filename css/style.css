@@ -5,11 +5,11 @@
     }
 .container{
     position: relative;
-    max-width: 1080px;
+    width: auto;
     }
 .column{
 	float: left;
-    width: 100%;
+    width: auto;
     box-sizing: border-box;
    	padding: 20px;
     margin: 15px 0px 15px 0px;
@@ -25,6 +25,7 @@ hr{
     padding: 0;
     }
 h1{
+    text-align: center;
     color: white;
     font-size: 52px;
     font-family: 'Source Sans Pro', sans-serif;
@@ -75,7 +76,7 @@ p{
     background:transparent url('../images/Miu.png') no-repeat;
     border: 0;
     overflow: hidden;
-    background-position: -2em;
+    background-position: -2em 1px;
 }
 .monokuma{
     height: 350px;
@@ -83,9 +84,10 @@ p{
     background:transparent url('../images/Monokuma.png') no-repeat;
     border: 0;
     overflow: hidden;
-    background-position: -3em;
+    background-position: -3em 3px;
 }
 .character{
+    height: 300px;
     font-family: 'Source Sans Pro', sans-serif;
     font-style: italic;
     display: inline-block;
@@ -96,18 +98,19 @@ p{
     border-radius: 15px 15px 15px 15px;
     transition: background linear 0.33s;
     text-shadow: -1px -1px 1px #aaa,
+             1px 1px black,
              0px 4px 1px rgba(236, 236, 236, 0.5),
              4px 4px 5px rgba(202, 202, 202, 0.7),
              0px 0px 7px rgba(0,0,0,0.4);
     position: relative;
     }
-
 .character:hover{
     border: solid 2px white;
     }
 
 .character:active {
-    background: white;
+    background: antiquewhite;
+    opacity: 0.2;
     transform: translateY(3px);
     }
 .character > h2{
@@ -141,5 +144,6 @@ p{
     background: white;
     transform: translateY(3px);
     }
-
-
+.clear{
+    clear:both;
+}

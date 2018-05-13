@@ -2,7 +2,7 @@
 
 //Document check
 $(document).ready(function() {
-    $(".container").on("click", ".item", function() {
+    $(".container").on("click", ".character", function() {
    		userPick = $(this).val();
 
 
