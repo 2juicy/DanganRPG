@@ -99,7 +99,9 @@ p{
              0px 4px 1px rgba(236, 236, 236, 0.5),
              4px 4px 5px rgba(202, 202, 202, 0.7),
              0px 0px 7px rgba(0,0,0,0.4);
+    position: relative;
     }
+
 .character:hover{
     border: solid 2px white;
     }
@@ -108,6 +110,13 @@ p{
     background: white;
     transform: translateY(3px);
     }
+.character > h2{
+    background-color: transparent;
+    margin: 0;
+    bottom: 8px;
+    left: 16px;
+    position: absolute;
+}
 #attack{
     font-family: 'Source Sans Pro', sans-serif;
     font-style: italic;
