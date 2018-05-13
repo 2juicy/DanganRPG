@@ -1,41 +1,39 @@
 //character stats and global variables
-const characters = ['Kaede', 'Kirumi', 'Miu', 'Monokuma'];
-const Kaede = {
+var Kaede = {
     health: 100,
     attack: 10,
     counter: 15,
 };
-const Kirumi = {
+var Kirumi = {
     health: 120,
     attack: 8,
     counter: 17
 };
-const Miu = {
+var Miu = {
     health: 150,
     attack: 6,
     counter: 19,
 };
-const Monokuma = {
+var Monokuma = {
     health: 180,
     attack: 5,
     counter: 22,
     };
+const characters = [Kaede, Kirumi, Miu, Monokuma];
 var countSelect = 0;
 var countEnemy = 0;
+var characterSelected;
 console.log(Kaede.health);
 console.log(Monokuma.attack);
 //Document check
 $(document).ready(function() {
     $('.enemy').hide();
     $('.defender').hide();
-    //functions
-    function yourChar(health, attack, counter){
-        var yourPick = {};
-        yourPick.health = health;
-        yourPick.attack = attack;
-        yourPick.counter = counter;
+    var atkPower = function(x){
+        x += characterSelected.attack;
+        return x;
     }
-    
+
     
     //song ignore this it was just for fun lol
     // var audioElement = document.createElement("audio");
@@ -68,8 +66,7 @@ $(document).ready(function() {
             $('#enemy4').hide();
         }}
    		let userPick = $(this).val();
-        var characterSelected = characters[userPick];
-        yourChar(characterSelected);
+        characterSelected = characters[userPick];
         //hides unclicked buttons and keeps character selection.
         $('.character').hide();
         $(this).show();
@@ -78,7 +75,6 @@ $(document).ready(function() {
         hideChosen(userPick);
         console.log(userPick);
         console.log(characterSelected);
-        console.log(yourChar);
         countSelect++;
 
     });// End of .on(click) function
@@ -110,7 +106,9 @@ $(document).ready(function() {
 
     //Begin on.click section to attack.
     $('#attack').on('click', function(){
-        counter += 1;
+        var totalAttack = atkPower(characterSelected.attack);
+        console.log(totalAttack);
+        
 
 
 
