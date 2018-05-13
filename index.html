@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="stylesheet" href="css/reset.css">
+	<link rel="stylesheet" href="css/style.css">
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+
+	<title>DanganRonpa RPG!</title>
+<!--  -->
+</head>
+<!--  -->
+<body>
+	<figure>
+		<img width="100%" height='100%' src="#">
+	</figure>
+	<div class="container">	
+		<h1>Danganronpa RPG</h1>
+<hr>
+		<div class="column">
+            <button id='character1' value='0'>Kaede Akamatsu</button>
+			<button id='character2' value='1'>Kirumi Tojo</button>
+			<button id='character3' value='2'>Miu Iruma</button>
+			<button id='character4' value='3'>Monokuma</button>
+			<p>Your Character</p>
+<hr>
+			<p>There are 4 berries. By clicking on an item you will add a specific amount of points to your total score.</p>
+
+		</div>
+		<div class="column">
+			<p><span id='yourWins'>Wins: 0</span></p>
+			<p><span id='yourLoses'>Loses: 0</span></p>
+		</div>
+		<p><span id='score'>Your Total Score Is: </span><span id='yourNum'></span></p>	
+		<div class="column">
+			
+		</div>
+		<div class="column">
+			<p><span id='score'>Your Total Score Is: </span><span id='yourTotal'></span></p>
+		</div>
+		<p><span id="winOrLose"></span></p>
+	</div>
+
+
+<script type="text/javascript" src='javascript/game.js'></script>
+</body>
+</html>
