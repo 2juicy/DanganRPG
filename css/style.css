@@ -12,7 +12,7 @@
     width: auto;
     box-sizing: border-box;
    	padding: 20px;
-    margin: 15px 0px 15px 0px;
+    margin: 15px 5px 15px 0px;
     border: 1px solid white;
     border-radius: 15px 15px 15px 15px;
     }
@@ -127,6 +127,15 @@ p{
              4px 4px 5px rgba(202, 202, 202, 0.7),
              0px 0px 7px rgba(0,0,0,0.4);
 }
+.enemy:hover{
+    border: solid 2px red;
+    }
+
+.enemy:active {
+    background: red;
+    opacity: 0.2;
+    transform: translateY(3px);
+    }
 #attack{
     font-family: 'Source Sans Pro', sans-serif;
     font-style: italic;
@@ -152,10 +161,16 @@ p{
     background: white;
     transform: translateY(3px);
     }
+#enemies{
+    border: 1px solid red;
+}
 .clear{
     clear:both;
 }
 .row{
     width: auto;
     float: left;
+}
+.red, div > .enemy, .enemy > h2{
+    color: red;
 }
