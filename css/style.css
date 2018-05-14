@@ -201,3 +201,9 @@ p{
 .red, div > .enemy, .enemy > h2{
     color: red;
 }
+#winOrLose{
+    font-size: 52px;
+    color: red;
+    display: block;
+    text-align: center;
+}

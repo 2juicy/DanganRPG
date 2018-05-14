@@ -27,6 +27,7 @@ var enemySelected = Kaede;
 var totalAttack = 0;
 var powerUp = 0;
 var clickOn = false;
+var enemySlain = 0;
 console.log(Kaede.health);
 console.log(Monokuma.attack);
 
@@ -98,6 +99,7 @@ $(document).ready(function() {
         }}
         let userPick = $(this).val();
         enemySelected = characters[userPick];
+        $(".enemyhp").text(enemySelected.health);
         showChosen(userPick);
         countEnemy++;
         clickOn = true;
@@ -122,7 +124,21 @@ $(document).ready(function() {
         if (enemySelected.health <= 0){
             $('.defender').hide();
             countEnemy = 0;
+            enemySlain++;
+            clickOn = false;
+            if (enemySlain === 3){
+                $('#reset').show();
+                $('#attack').hide();
+                $("#winOrLose").text('Victory!');
+            }
         }
+        if (characterSelected.health <= 0){
+            $("#winOrLose").text('Defeat!');
+            $(".yourhp").text('0');
+            $('#reset').show();
+            $('#attack').hide();
+            countEnemy = 1;
+        } 
 
 
 
