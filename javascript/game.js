@@ -101,7 +101,7 @@ $(document).ready(function() {
             enemySlain++;
             clickOn = false;
             if (enemySlain === 3){
-                $('#reset').show();
+                $('#reset').slideDown();
                 $('#attack').hide();
                 $("#winOrLose").text('Victory! Game Over!');
             }
@@ -109,7 +109,7 @@ $(document).ready(function() {
         if (characterSelected.health <= 0){
             $("#winOrLose").text('Defeat! Game Over!');
             $(".yourhp").text('0');
-            $('#reset').show();
+            $('#reset').slideDown();
             $('#attack').hide();
             countEnemy = 1;
         }
