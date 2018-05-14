@@ -94,9 +94,10 @@ $(document).ready(function() {
         $(".enemyhp").text(enemySelected.health);
         $("#winOrLose").text('You did ' + totalAttack + ' damage! Your enemy did ' + enemySelected.counter + ' damage to you!');
         if (enemySelected.health <= 0){
+            $("#winOrLose").text('You did ' + totalAttack + ' damage! Your enemy did ' + enemySelected.counter + ' damage to you! You defeated your enemy!');
             characterSelected.health += enemySelected.counter;
             $(".yourhp").text(characterSelected.health);
-            $('.defender').fadeOut();
+            $('.defender').fadeOut(666);
             countEnemy = 0;
             enemySlain++;
             clickOn = false;
@@ -109,7 +110,7 @@ $(document).ready(function() {
         if (characterSelected.health <= 0){
             $("#winOrLose").text('Defeat! Game Over!');
             $(".yourhp").text('0');
-            $('#reset').slideDown();
+            $('#reset').slideDown(666);
             $('#attack').hide();
             countEnemy = 1;
         }
