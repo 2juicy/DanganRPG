@@ -1,7 +1,7 @@
 //character stats and global variables
 var Kaede = {
     health: 100,
-    attack: 10,
+    attack: 12,
     counter: 5,
 };
 var Kirumi = {
@@ -11,12 +11,12 @@ var Kirumi = {
 };
 var Miu = {
     health: 150,
-    attack: 6,
+    attack: 4,
     counter: 20,
 };
 var Monokuma = {
     health: 180,
-    attack: 4,
+    attack: 2,
     counter: 25,
     };
 var characters = [Kaede, Kirumi, Miu, Monokuma];
