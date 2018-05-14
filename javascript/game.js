@@ -37,20 +37,19 @@ $(document).ready(function() {
     $('#reset').hide();
     //on.click starts here for character selection, hides unselected characters.
     $(".container").on("click", ".select", function() {
-    // $(".container").on("click", "#character1", function() {
         if (countSelect === 1){
             return;
         }
         const hideChosen = function(x){
-        if (x == 0){
-            $('#enemy1').hide();
-        } else if (x == 1){
-            $('#enemy2').hide();
-        } else if (x == 2){
-            $('#enemy3').hide();
-        } else {
-            $('#enemy4').hide();
-        }}
+            if (x == 0){
+                $('#enemy1').hide();
+            } else if (x == 1){
+                $('#enemy2').hide();
+            } else if (x == 2){
+                $('#enemy3').hide();
+            } else {
+                $('#enemy4').hide();
+            }}
    		let userPick = $(this).val();
         characterSelected = characters[userPick];
         //hides unclicked buttons and keeps character selection.
@@ -59,8 +58,6 @@ $(document).ready(function() {
         //shows enemies
         $('.enemy').show();
         hideChosen(userPick);
-        console.log(userPick);
-        console.log(characterSelected);
         countSelect++;
     });// End of .on(click) function
     $(".container").on("click", ".enemy", function() {
@@ -69,15 +66,15 @@ $(document).ready(function() {
         }
         $(this).hide();
         const showChosen = function(x){
-        if (x == 0){
-            $('#defender1').show();
-        } else if (x == 1){
-            $('#defender2').show();
-        } else if (x == 2){
-            $('#defender3').show();
-        } else {
-            $('#defender4').show();
-        }}
+            if (x == 0){
+                $('#defender1').show();
+            } else if (x == 1){
+                $('#defender2').show();
+            } else if (x == 2){
+                $('#defender3').show();
+            } else {
+                $('#defender4').show();
+            }}
         let userPick = $(this).val();
         enemySelected = characters[userPick];
         $(".enemyhp").text(enemySelected.health);

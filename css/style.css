@@ -114,7 +114,6 @@ p{
 .character:hover{
     border: solid 2px white;
     }
-
 .character:active {
     background: antiquewhite;
     opacity: 0.2;
