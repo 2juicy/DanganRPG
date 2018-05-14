@@ -2,22 +2,22 @@
 var Kaede = {
     health: 100,
     attack: 10,
-    counter: 15,
+    counter: 5,
 };
 var Kirumi = {
     health: 120,
     attack: 8,
-    counter: 17
+    counter: 10
 };
 var Miu = {
     health: 150,
     attack: 6,
-    counter: 19,
+    counter: 20,
 };
 var Monokuma = {
     health: 180,
-    attack: 5,
-    counter: 22,
+    attack: 4,
+    counter: 25,
     };
 var characters = [Kaede, Kirumi, Miu, Monokuma];
 var countSelect = 0;
@@ -113,6 +113,7 @@ $(document).ready(function() {
     //Begin on.click section to attack.
     $('#attack').on('click', function(){
         if (clickOn === false){
+            $("#winOrLose").text('No enemy here');
             return;
         }
         powerUp = characterSelected.attack;
@@ -121,7 +122,10 @@ $(document).ready(function() {
         $(".yourhp").text(characterSelected.health);
         enemySelected.health -= totalAttack;
         $(".enemyhp").text(enemySelected.health);
+        $("#winOrLose").text('You did ' + totalAttack + ' damage! Your enemy did ' + enemySelected.counter + ' damage to you!');
         if (enemySelected.health <= 0){
+            characterSelected.health += enemySelected.counter;
+            $(".yourhp").text(characterSelected.health);
             $('.defender').hide();
             countEnemy = 0;
             enemySlain++;
@@ -129,11 +133,11 @@ $(document).ready(function() {
             if (enemySlain === 3){
                 $('#reset').show();
                 $('#attack').hide();
-                $("#winOrLose").text('Victory!');
+                $("#winOrLose").text('Victory! Game Over!');
             }
         }
         if (characterSelected.health <= 0){
-            $("#winOrLose").text('Defeat!');
+            $("#winOrLose").text('Defeat! Game Over!');
             $(".yourhp").text('0');
             $('#reset').show();
             $('#attack').hide();
