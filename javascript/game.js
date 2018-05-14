@@ -26,13 +26,11 @@ var characterSelected = Kaede;
 var enemySelected = Kaede;
 var totalAttack = 0;
 var powerUp = 0;
+var myHP = 0;
+var enemyHP = 0;
 console.log(Kaede.health);
 console.log(Monokuma.attack);
-//Attack power function
-var atkPower = function(x){
-        x += characterSelected.attack;
-        return x;
-    }
+
 //Document check
 $(document).ready(function() {
     $('.enemy').hide();
@@ -112,7 +110,7 @@ $(document).ready(function() {
 
     //Begin on.click section to attack.
     $('#attack').on('click', function(){
-        powerUp = atkPower(characterSelected.attack);
+        powerUp = characterSelected.attack;
         totalAttack += powerUp;
         console.log(totalAttack);
         console.log(characterSelected);
