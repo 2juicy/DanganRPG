@@ -36,22 +36,6 @@ $(document).ready(function() {
     $('.enemy').hide();
     $('.defender').hide();
     $('#reset').hide();
-
-    
-    //song ignore this it was just for fun lol
-    // var audioElement = document.createElement("audio");
-    //     audioElement.setAttribute("src", "images/soundtrack.mp3");    
-    // $(".column").on("click", "#character1", function() {
-    //       audioElement.play();
-    //     }).on("click", "#character2", function() {
-    //       audioElement.pause();
-    //     });
-    
-
-
-
-
-
     //on.click starts here for character selection, hides unselected characters.
     $(".container").on("click", ".select", function() {
     // $(".container").on("click", "#character1", function() {
@@ -79,9 +63,7 @@ $(document).ready(function() {
         console.log(userPick);
         console.log(characterSelected);
         countSelect++;
-
     });// End of .on(click) function
-
     $(".container").on("click", ".enemy", function() {
         if (countEnemy === 1){
             return;
@@ -103,13 +85,7 @@ $(document).ready(function() {
         showChosen(userPick);
         countEnemy++;
         clickOn = true;
-    // }).on("click", "#character2", function() {
-    //     }).on("click", "#character3", function() {
-    //         }).on("click", "#character4", function() {
-
     });// End of .on(click) function
-
-
     //Begin on.click section to attack.
     $('#attack').on('click', function(){
         if (clickOn === false){
@@ -142,32 +118,6 @@ $(document).ready(function() {
             $('#reset').show();
             $('#attack').hide();
             countEnemy = 1;
-        } 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-        console.log(totalAttack);
-        console.log(characterSelected);
-        console.log(enemySelected.counter);
-        console.log(characterSelected.health);
+        }
     });//end of attack click
-
-
-
-
-
-
 }); // Document.ready ends here.
