@@ -1,20 +1,20 @@
 //character stats and global variables
-var Kaede = {
+const Kaede = {
     health: 100,
     attack: 10,
     counter: 15,
 };
-var Kirumi = {
+const Kirumi = {
     health: 120,
     attack: 8,
     counter: 17
 };
-var Miu = {
+const Miu = {
     health: 150,
     attack: 6,
     counter: 19,
 };
-var Monokuma = {
+const Monokuma = {
     health: 180,
     attack: 5,
     counter: 22,
@@ -22,17 +22,22 @@ var Monokuma = {
 const characters = [Kaede, Kirumi, Miu, Monokuma];
 var countSelect = 0;
 var countEnemy = 0;
-var characterSelected;
+var characterSelected = Kaede;
+var enemySelected = Kaede;
+var totalAttack = 0;
+var powerUp = 0;
 console.log(Kaede.health);
 console.log(Monokuma.attack);
+//Attack power function
+var atkPower = function(x){
+        x += characterSelected.attack;
+        return x;
+    }
 //Document check
 $(document).ready(function() {
     $('.enemy').hide();
     $('.defender').hide();
-    var atkPower = function(x){
-        x += characterSelected.attack;
-        return x;
-    }
+    
 
     
     //song ignore this it was just for fun lol
@@ -95,6 +100,7 @@ $(document).ready(function() {
             $('#defender4').show();
         }}
         let userPick = $(this).val();
+        enemySelected = characters[userPick];
         showChosen(userPick);
         countEnemy++;
     // }).on("click", "#character2", function() {
@@ -106,8 +112,10 @@ $(document).ready(function() {
 
     //Begin on.click section to attack.
     $('#attack').on('click', function(){
-        var totalAttack = atkPower(characterSelected.attack);
+        powerUp = atkPower(characterSelected.attack);
+        totalAttack += powerUp;
         console.log(totalAttack);
+        console.log(characterSelected);
         
 
 
