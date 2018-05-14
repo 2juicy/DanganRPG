@@ -30,7 +30,6 @@ var clickOn = false;
 var enemySlain = 0;
 console.log(Kaede.health);
 console.log(Monokuma.attack);
-
 //Document check
 $(document).ready(function() {
     $('.enemy').hide();
