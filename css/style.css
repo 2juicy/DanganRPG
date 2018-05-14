@@ -32,7 +32,7 @@ hr{
 h1{
     text-align: center;
     color: white;
-    font-size: 48px;
+    font-size: 50px;
     font-family: 'Source Sans Pro', sans-serif;
     font-weight: bold;
     text-shadow: -1px -1px 1px #aaa,
@@ -204,7 +204,7 @@ p{
     color: red;
 }
 #winOrLose{
-    font-size: 47px;
+    font-size: 44px;
     color: red;
     display: block;
     text-align: center;

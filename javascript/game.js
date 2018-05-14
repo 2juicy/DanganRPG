@@ -102,8 +102,8 @@ $(document).ready(function() {
             enemySlain++;
             clickOn = false;
             if (enemySlain === 3){
-                $('#reset').slideDown();
-                $('#attack').hide();
+                $('#reset').slideDown(666);
+                $('#attack').slideUp(155);
                 $("#winOrLose").text('Victory! Game Over!');
             }
         }
@@ -111,7 +111,7 @@ $(document).ready(function() {
             $("#winOrLose").text('Defeat! Game Over!');
             $(".yourhp").text('0');
             $('#reset').slideDown(666);
-            $('#attack').hide();
+            $('#attack').slideUp(155);
             countEnemy = 1;
         }
     });//end of attack click
