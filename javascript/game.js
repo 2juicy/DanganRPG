@@ -96,7 +96,7 @@ $(document).ready(function() {
         if (enemySelected.health <= 0){
             characterSelected.health += enemySelected.counter;
             $(".yourhp").text(characterSelected.health);
-            $('.defender').hide();
+            $('.defender').fadeOut();
             countEnemy = 0;
             enemySlain++;
             clickOn = false;
