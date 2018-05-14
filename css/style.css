@@ -1,8 +1,13 @@
 *{
 	margin: 0;
 	padding: 0;
-    background: black;
     }
+body{
+    background: url(../images/drbg.jpg);
+    background-repeat: repeat-y;
+    background-size: cover;
+    position: absolute;
+}
 .container{
     position: relative;
     width: auto;
@@ -141,6 +146,7 @@ p{
     font-style: italic;
     display: inline-block;
     color: white;
+    background: black;
     margin: 0px 2px 0px 2px;
     box-shadow: 0px 3px 8px #43484c;
     padding: 10px 15px 10px 15px;
@@ -165,6 +171,7 @@ p{
     font-style: italic;
     display: inline-block;
     color: white;
+    background: black;
     margin: 0px 2px 0px 2px;
     box-shadow: 0px 3px 8px #43484c;
     padding: 10px 15px 10px 15px;
