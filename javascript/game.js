@@ -26,6 +26,7 @@ var characterSelected = Kaede;
 var enemySelected = Kaede;
 var totalAttack = 0;
 var powerUp = 0;
+var clickOn = false;
 console.log(Kaede.health);
 console.log(Monokuma.attack);
 
@@ -33,7 +34,7 @@ console.log(Monokuma.attack);
 $(document).ready(function() {
     $('.enemy').hide();
     $('.defender').hide();
-    
+    $('#reset').hide();
 
     
     //song ignore this it was just for fun lol
@@ -99,6 +100,7 @@ $(document).ready(function() {
         enemySelected = characters[userPick];
         showChosen(userPick);
         countEnemy++;
+        clickOn = true;
     // }).on("click", "#character2", function() {
     //     }).on("click", "#character3", function() {
     //         }).on("click", "#character4", function() {
@@ -108,6 +110,9 @@ $(document).ready(function() {
 
     //Begin on.click section to attack.
     $('#attack').on('click', function(){
+        if (clickOn === false){
+            return;
+        }
         powerUp = characterSelected.attack;
         totalAttack += powerUp;
         characterSelected.health -= enemySelected.counter;
