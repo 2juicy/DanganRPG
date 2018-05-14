@@ -116,6 +116,7 @@ p{
     transform: translateY(3px);
     }
 .character > h2, .character > span{
+    font-size: 38px;
     background-color: transparent;
     margin: 0;
     bottom: 8px;

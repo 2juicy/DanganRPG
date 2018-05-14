@@ -1,33 +1,31 @@
 //character stats and global variables
-const Kaede = {
+var Kaede = {
     health: 100,
     attack: 10,
     counter: 15,
 };
-const Kirumi = {
+var Kirumi = {
     health: 120,
     attack: 8,
     counter: 17
 };
-const Miu = {
+var Miu = {
     health: 150,
     attack: 6,
     counter: 19,
 };
-const Monokuma = {
+var Monokuma = {
     health: 180,
     attack: 5,
     counter: 22,
     };
-const characters = [Kaede, Kirumi, Miu, Monokuma];
+var characters = [Kaede, Kirumi, Miu, Monokuma];
 var countSelect = 0;
 var countEnemy = 0;
 var characterSelected = Kaede;
 var enemySelected = Kaede;
 var totalAttack = 0;
 var powerUp = 0;
-var myHP = 0;
-var enemyHP = 0;
 console.log(Kaede.health);
 console.log(Monokuma.attack);
 
@@ -112,23 +110,34 @@ $(document).ready(function() {
     $('#attack').on('click', function(){
         powerUp = characterSelected.attack;
         totalAttack += powerUp;
+        characterSelected.health -= enemySelected.counter;
+        $(".yourhp").text(characterSelected.health);
+        enemySelected.health -= totalAttack;
+        $(".enemyhp").text(enemySelected.health);
+        if (enemySelected.health <= 0){
+            $('.defender').hide();
+            countEnemy = 0;
+        }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
         console.log(totalAttack);
         console.log(characterSelected);
-        
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+        console.log(enemySelected.counter);
+        console.log(characterSelected.health);
     });//end of attack click
 
 
