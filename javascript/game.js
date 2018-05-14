@@ -52,7 +52,7 @@ $(document).ready(function() {
         characterSelected = characters[userPick];
         //hides unclicked buttons and keeps character selection.
         $('.character').hide();
-        $(this).show();
+        $(this).slideDown();
         //shows enemies
         $('.enemy').show();
         hideChosen(userPick);
@@ -65,13 +65,13 @@ $(document).ready(function() {
         $(this).hide();
         const showChosen = function(x){
             if (x == 0){
-                $('#defender1').show();
+                $('#defender1').slideDown();
             } else if (x == 1){
-                $('#defender2').show();
+                $('#defender2').slideDown();
             } else if (x == 2){
-                $('#defender3').show();
+                $('#defender3').slideDown();
             } else {
-                $('#defender4').show();
+                $('#defender4').slideDown();
             }}
         let userPick = $(this).val();
         enemySelected = characters[userPick];
