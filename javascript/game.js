@@ -64,6 +64,7 @@ $(document).ready(function() {
         if (countEnemy === 1){
             return;
         }
+        $("#winOrLose").text('');
         $(this).hide();
         const showChosen = function(x){
             if (x == 0){
