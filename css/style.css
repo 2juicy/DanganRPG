@@ -16,12 +16,6 @@
     background: url(style.css) no-repeat;
     background-size: cover;
 }
-/* body{
-    background: url(../images/drbg.jpg);
-    background-repeat: repeat-y;
-    background-size: cover;
-    position: absolute;
-} */
 .container{
     position: relative;
     width: auto;
@@ -43,18 +37,6 @@ hr{
     margin: 1em 0 1em 0;
     padding: 0;
     }
-/* h1{
-    text-align: center;
-    color: white;
-    font-size: 50px;
-    font-family: 'Source Sans Pro', sans-serif;
-    font-weight: bold;
-    text-shadow: -1px -1px 1px #aaa,
-             2px 1px red,
-             0px 4px 1px rgba(236, 236, 236, 0.5),
-             4px 4px 5px rgba(202, 202, 202, 0.7),
-             0px 0px 7px rgba(0,0,0,0.4);
-    } */
 h2{
     display: block;
     color: white;
