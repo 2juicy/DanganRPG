@@ -94,7 +94,7 @@ $(document).ready(function() {
         $(".enemyhp").text(enemySelected.health);
         $("#winOrLose").text('You did ' + totalAttack + ' damage! Your enemy did ' + enemySelected.counter + ' damage to you!');
         if (enemySelected.health <= 0){
-            $("#winOrLose").text('You did ' + totalAttack + ' damage! Your enemy did ' + enemySelected.counter + ' damage to you! You defeated your enemy!');
+            $("#winOrLose").text('You did ' + totalAttack + ' damage! You defeated your enemy!');
             characterSelected.health += enemySelected.counter;
             $(".yourhp").text(characterSelected.health);
             $('.defender').fadeOut(666);
