@@ -58,10 +58,9 @@ $(document).ready(function() {
         $('.enemy').show();
         hideChosen(userPick);
         countSelect++;
-        $("#winOrLose").text('Select your opponent!');
+        $("#winOrLose").text('Select your opponent! Defeat all enemies to win!');
     });// End of .on(click) function, start enemy selection and hide.
     $(".container").on("click", ".enemy", function() {
-        $("#winOrLose").text('Now attack! Defeat all enemies to win!');
         if (countEnemy === 1){
             return;
         }
