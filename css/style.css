@@ -16,12 +16,12 @@
     background: url(style.css) no-repeat;
     background-size: cover;
 }
-body{
+/* body{
     background: url(../images/drbg.jpg);
     background-repeat: repeat-y;
     background-size: cover;
     position: absolute;
-}
+} */
 .container{
     position: relative;
     width: auto;
