@@ -19,7 +19,7 @@ var Monokuma = {
     attack: 2,
     counter: 25,
     };
-var characters = [Kaede, Kirumi, Miu, Monokuma];
+const characters = [Kaede, Kirumi, Miu, Monokuma];
 var countSelect = 0;
 var countEnemy = 0;
 var characterSelected = Kaede;
@@ -30,6 +30,7 @@ var clickOn = false;
 var enemySlain = 0;
 //Document check
 $(document).ready(function() {
+    $("#winOrLose").text('Select your character');
     $('.enemy').hide();
     $('.defender').hide();
     $('#reset').hide();
@@ -57,8 +58,10 @@ $(document).ready(function() {
         $('.enemy').show();
         hideChosen(userPick);
         countSelect++;
-    });// End of .on(click) function
+        $("#winOrLose").text('Select your opponent!');
+    });// End of .on(click) function, start enemy selection and hide.
     $(".container").on("click", ".enemy", function() {
+        $("#winOrLose").text('Now attack! Defeat all enemies to win!');
         if (countEnemy === 1){
             return;
         }
@@ -79,8 +82,7 @@ $(document).ready(function() {
         showChosen(userPick);
         countEnemy++;
         clickOn = true;
-    });// End of .on(click) function
-    //Begin on.click section to attack.
+    });// End of .on(click) function, begin on.click section to attack.
     $('#attack').on('click', function(){
         if (clickOn === false){
             $("#winOrLose").text('No enemy here');
