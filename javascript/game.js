@@ -1,24 +1,13 @@
 //character stats and global variables
-var Kaede = {
-    health: 100,
-    attack: 12,
-    counter: 5,
-};
-var Kirumi = {
-    health: 120,
-    attack: 8,
-    counter: 10
-};
-var Miu = {
-    health: 150,
-    attack: 4,
-    counter: 20,
-};
-var Monokuma = {
-    health: 180,
-    attack: 2,
-    counter: 25,
-    };
+function character(health, attack, counter) {
+  this.health = health;
+  this.attack = attack;
+  this.counter = counter;
+}
+var Kaede = new character(100, 12, 5);
+var Kirumi = new character(120, 8, 10);
+var Miu = new character(150, 4, 20);
+var Monokuma = new character(180, 2, 25);
 const characters = [Kaede, Kirumi, Miu, Monokuma];
 var countSelect = 0;
 var countEnemy = 0;
