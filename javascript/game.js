@@ -114,6 +114,7 @@ $(document).ready(function() {
         $("#reset").slideDown(666);
         $("#attack").slideUp(155);
         $("#winOrLose").text("Victory! Game Over!");
+        $("#enemies").hide();
       }
     }
     if (characterSelected.health <= 0) {
@@ -121,7 +122,6 @@ $(document).ready(function() {
       $(".yourhp").text("0");
       $("#reset").slideDown(666);
       $("#attack").slideUp(155);
-      countEnemy = 1;
     }
   }); //end of attack click
 }); // Document.ready ends here.
