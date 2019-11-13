@@ -10,19 +10,17 @@ body {
   -o-background-size: cover;
   background-size: cover;
 }
-.container {
-  flex-direction: column;
-}
-.row,
-.container {
+.row {
   display: flex;
   flex-wrap: wrap;
+}
+.center {
+  width: 100%;
 }
 .wrapper {
   display: inline-block;
   padding: 2px;
   margin: 15px 5px 15px 0px;
-  border: 1px solid white;
   border-radius: 15px 15px 15px 15px;
 }
 h2,
@@ -102,29 +100,7 @@ p {
   opacity: 0.2;
   transform: translateY(3px);
 }
-#attack {
-  font-family: "Source Sans Pro", sans-serif;
-  font-style: italic;
-  display: inline-block;
-  color: white;
-  background: black;
-  margin: 0px 2px 0px 2px;
-  box-shadow: 0px 3px 8px #43484c;
-  padding: 10px 15px 10px 15px;
-  font-size: 26px;
-  border-radius: 5px 5px 5px 5px;
-  transition: background linear 0.2s;
-  text-shadow: -1px -1px 1px #aaa, 1px 1px black,
-    0px 4px 1px rgba(236, 236, 236, 0.5), 4px 4px 5px rgba(202, 202, 202, 0.7),
-    0px 0px 7px rgba(0, 0, 0, 0.4);
-}
-#attack:hover {
-  border: solid 3px red;
-}
-#attack:active {
-  background: red;
-  transform: translateY(3px);
-}
+#attack,
 #reset {
   font-family: "Source Sans Pro", sans-serif;
   font-style: italic;
@@ -134,13 +110,26 @@ p {
   margin: 0px 2px 0px 2px;
   box-shadow: 0px 3px 8px #43484c;
   padding: 10px 15px 10px 15px;
-  font-size: 30px;
   border-radius: 5px 5px 5px 5px;
   transition: background linear 0.2s;
   text-shadow: -1px -1px 1px #aaa, 1px 1px black,
     0px 4px 1px rgba(236, 236, 236, 0.5), 4px 4px 5px rgba(202, 202, 202, 0.7),
     0px 0px 7px rgba(0, 0, 0, 0.4);
 }
+#attack {
+  font-size: 26px;
+}
+#reset {
+  font-size: 30px;
+}
+#attack:hover {
+  border: solid 3px red;
+}
+#attack:active {
+  background: red;
+  transform: translateY(3px);
+}
+
 #reset:hover {
   border: solid 3px whitesmoke;
 }
@@ -148,17 +137,14 @@ p {
   background: white;
   transform: translateY(3px);
 }
-.enemies {
-  border: 1px solid red;
-}
 .red,
+#winOrLose,
 div > .enemy,
 .enemy > h2 {
   color: red;
 }
 #winOrLose {
   font-size: 36px;
-  color: red;
   text-shadow: -1px -1px 1px #aaa, 1px 1px black,
     0px 4px 1px rgba(236, 236, 236, 0.5), 4px 4px 5px rgba(202, 202, 202, 0.7),
     0px 0px 7px rgba(0, 0, 0, 0.4);
