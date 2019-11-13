@@ -9,12 +9,9 @@ const Kirumi = new Character(120, 8, 10);
 const Miu = new Character(150, 4, 20);
 const Monokuma = new Character(180, 2, 25);
 const characters = [Kaede, Kirumi, Miu, Monokuma];
-
 let characterSelected = false;
 let enemySelected = false;
 let totalAttack = 0;
-let powerUp = 0;
-let clickOn = false;
 let enemySlain = 0;
 //Document check
 $(document).ready(function() {
@@ -51,18 +48,16 @@ $(document).ready(function() {
     enemySelected = characters[userPick];
     $(".enemyhp").text(enemySelected.health);
     $(`#defender${userPick}`).slideDown();
-    clickOn = true;
     if (enemySlain === 2) {
       $("#enemies").hide();
     }
   }); // End of .on(click) function, begin on.click section to attack.
   $("#attack").on("click", function() {
-    if (clickOn === false) {
+    if (!characterSelected || !enemySelected) {
       $("#winOrLose").text("No enemy here");
       return;
     }
-    powerUp = characterSelected.attack;
-    totalAttack += powerUp;
+    totalAttack += characterSelected.attack;
     characterSelected.health -= enemySelected.counter;
     $(".yourhp").text(characterSelected.health);
     enemySelected.health -= totalAttack;
@@ -83,7 +78,6 @@ $(document).ready(function() {
       $(".defender").fadeOut(666);
       enemySelected = false;
       enemySlain++;
-      clickOn = false;
       $("#enemies").show();
       if (enemySlain === 3) {
         $("#reset").slideDown(666);
