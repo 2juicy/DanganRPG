@@ -4,19 +4,19 @@ function Character(health, attack, counter) {
   this.attack = attack;
   this.counter = counter;
 }
-var Kaede = new Character(100, 12, 5);
-var Kirumi = new Character(120, 8, 10);
-var Miu = new Character(150, 4, 20);
-var Monokuma = new Character(180, 2, 25);
+const Kaede = new Character(100, 12, 5);
+const Kirumi = new Character(120, 8, 10);
+const Miu = new Character(150, 4, 20);
+const Monokuma = new Character(180, 2, 25);
 const characters = [Kaede, Kirumi, Miu, Monokuma];
-var countSelect = 0;
-var countEnemy = 0;
-var characterSelected = Kaede;
-var enemySelected = Kaede;
-var totalAttack = 0;
-var powerUp = 0;
-var clickOn = false;
-var enemySlain = 0;
+let countSelect = 0;
+let countEnemy = 0;
+let characterSelected = Kaede;
+let enemySelected = Kaede;
+let totalAttack = 0;
+let powerUp = 0;
+let clickOn = false;
+let enemySlain = 0;
 //Document check
 $(document).ready(function() {
   $("#winOrLose").text("Select your character");
