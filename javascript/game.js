@@ -9,10 +9,9 @@ const Kirumi = new Character(120, 8, 10);
 const Miu = new Character(150, 4, 20);
 const Monokuma = new Character(180, 2, 25);
 const characters = [Kaede, Kirumi, Miu, Monokuma];
-let countSelect = 0;
-let countEnemy = 0;
-let characterSelected = Kaede;
-let enemySelected = Kaede;
+
+let characterSelected = false;
+let enemySelected = false;
 let totalAttack = 0;
 let powerUp = 0;
 let clickOn = false;
@@ -27,21 +26,10 @@ $(document).ready(function() {
   $("#reset").hide();
   //on.click starts here for character selection, hides unselected characters.
   $(".container").on("click", ".select", function() {
-    $("#enemies").show();
-    if (countSelect === 1) {
+    if (characterSelected) {
       return;
     }
-    const hideChosen = function(x) {
-      if (x == 0) {
-        $("#enemy1").hide();
-      } else if (x == 1) {
-        $("#enemy2").hide();
-      } else if (x == 2) {
-        $("#enemy3").hide();
-      } else {
-        $("#enemy4").hide();
-      }
-    };
+    $("#enemies").show();
     let userPick = $(this).val();
     characterSelected = characters[userPick];
     //hides unclicked buttons and keeps character selection.
@@ -49,33 +37,20 @@ $(document).ready(function() {
     $(this).slideDown();
     //shows enemies
     $(".enemy").show();
-    hideChosen(userPick);
-    countSelect++;
+    $(`#enemy${userPick}`).hide();
     $("#winOrLose").text("Select your opponent! Defeat all enemies to win!");
   }); // End of .on(click) function, start enemy selection and hide.
   $(".container").on("click", ".enemy", function() {
-    $("#defenders").show();
-    if (countEnemy === 1) {
+    if (enemySelected) {
       return;
     }
+    $("#defenders").show();
     $("#winOrLose").text("");
     $(this).hide();
-    const showChosen = function(x) {
-      if (x == 0) {
-        $("#defender1").slideDown();
-      } else if (x == 1) {
-        $("#defender2").slideDown();
-      } else if (x == 2) {
-        $("#defender3").slideDown();
-      } else {
-        $("#defender4").slideDown();
-      }
-    };
     let userPick = $(this).val();
     enemySelected = characters[userPick];
     $(".enemyhp").text(enemySelected.health);
-    showChosen(userPick);
-    countEnemy++;
+    $(`#defender${userPick}`).slideDown();
     clickOn = true;
     if (enemySlain === 2) {
       $("#enemies").hide();
@@ -106,7 +81,7 @@ $(document).ready(function() {
       characterSelected.health += enemySelected.counter;
       $(".yourhp").text(characterSelected.health);
       $(".defender").fadeOut(666);
-      countEnemy = 0;
+      enemySelected = false;
       enemySlain++;
       clickOn = false;
       $("#enemies").show();
