@@ -1,210 +1,161 @@
-*{
-	margin: 0;
-	padding: 0;
-    }
-#background {
-    position: fixed;
-    top: 50%;
-    left: 50%;
-    min-width: 100%;
-    min-height: 100%;
-    width: auto;
-    height: auto;
-    z-index: -100;
-    -webkit-transform: translateX(-50%) translateY(-50%);
-    transform: translateX(-50%) translateY(-50%);
-    background: url(style.css) no-repeat;
-    background-size: cover;
+body {
+  background: black url("../images/background.jpg") no-repeat center center
+    fixed;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
 }
-.container{
-    position: relative;
-    width: auto;
-    }
-.column{
-	float: left;
-    width: auto;
-    box-sizing: border-box;
-   	padding: 2px;
-    margin: 15px 5px 15px 0px;
-    border: 1px solid white;
-    border-radius: 15px 15px 15px 15px;
-    }
-hr{
-    display: block;
-    height: 1px;
-    border:0;
-    border-top: 1px solid white; 
-    margin: 1em 0 1em 0;
-    padding: 0;
-    }
-h2{
-    display: block;
-    color: white;
-    font-size: 30px;
-    font-family: 'Source Sans Pro', sans-serif;
-    font-weight: bold;
-    text-shadow: -1px -1px 1px #aaa,
-             0px 4px 1px rgba(236, 236, 236, 0.5),
-             4px 4px 5px rgba(202, 202, 202, 0.7),
-             0px 0px 7px rgba(0,0,0,0.4);
+.container {
+  flex-direction: column;
 }
-p{
-    color: white;
-    font-size: 22px;
-    font-family: 'Source Sans Pro', sans-serif;
-    text-shadow: -1px -1px 1px #aaa,
-             0px 4px 1px rgba(236, 236, 236, 0.5),
-             4px 4px 5px rgba(202, 202, 202, 0.7),
-             0px 0px 7px rgba(0,0,0,0.4);
+.row,
+.container {
+  display: flex;
+  flex-wrap: wrap;
 }
-.kaede{
-    height: 350px;
-    width: 225px;
-    background:transparent url('../images/Kaede.png') no-repeat;
-    border: 0;
-    overflow: hidden;
-    background-position: -3em 1px;
+.wrapper {
+  display: inline-block;
+  padding: 2px;
+  margin: 15px 5px 15px 0px;
+  border: 1px solid white;
+  border-radius: 15px 15px 15px 15px;
 }
-.kirumi{
-    height: 350px;
-    width: 225px;
-    background:transparent url('../images/Kirumi.png') no-repeat;
-    border: 0;
-    overflow: hidden;
-    background-position: -2em -6px;
+h2,
+p {
+  font-family: "Source Sans Pro", sans-serif;
+  color: white;
+  text-shadow: -1px -1px 1px #aaa, 0px 4px 1px rgba(236, 236, 236, 0.5),
+    4px 4px 5px rgba(202, 202, 202, 0.7), 0px 0px 7px rgba(0, 0, 0, 0.4);
 }
-.miu{
-    height: 350px;
-    width: 225px;
-    background:transparent url('../images/Miu.png') no-repeat;
-    border: 0;
-    overflow: hidden;
-    background-position: -2em 1px;
+h2 {
+  font-size: 30px;
+  font-weight: bold;
 }
-.monokuma{
-    height: 350px;
-    width: 225px;
-    background:transparent url('../images/Monokuma.png') no-repeat;
-    border: 0;
-    overflow: hidden;
-    background-position: -3em 3px;
+p {
+  font-size: 22px;
 }
-.character{
-    height: 225px;
-    font-family: 'Source Sans Pro', sans-serif;
-    font-style: italic;
-    display: inline-block;
-    color: white;
-    margin: 0px 2px 0px 2px;
-    box-shadow: 0px 3px 8px #43484c;
-    font-size: 24px;
-    border-radius: 15px 15px 15px 15px;
-    transition: background linear 0.33s;
-    text-shadow: -1px -1px 1px #aaa,
-             1px 1px black,
-             0px 4px 1px rgba(236, 236, 236, 0.5),
-             4px 4px 5px rgba(202, 202, 202, 0.7),
-             0px 0px 7px rgba(0,0,0,0.4);
-    position: relative;
-    }
-.character:hover{
-    border: solid 2px white;
-    }
+.kaede {
+  background: rgba(0, 0, 0, 0.66) url("../images/Kaede.png") no-repeat;
+  background-position: -3em 1px;
+}
+.kirumi {
+  background: rgba(0, 0, 0, 0.66) url("../images/Kirumi.png") no-repeat;
+  background-position: -2em -6px;
+}
+.miu {
+  background: rgba(0, 0, 0, 0.66) url("../images/Miu.png") no-repeat;
+  background-position: -2em 1px;
+}
+.monokuma {
+  background: rgba(0, 0, 0, 0.66) url("../images/Monokuma.png") no-repeat;
+  background-position: -3em 3px;
+}
+.character {
+  height: 250px;
+  width: 225px;
+  border: 0;
+  overflow: hidden;
+  font-family: "Source Sans Pro", sans-serif;
+  font-style: italic;
+  display: inline-block;
+  color: white;
+  margin: 0px 2px 0px 2px;
+  box-shadow: 0px 3px 8px #43484c;
+  font-size: 24px;
+  border-radius: 15px 15px 15px 15px;
+  transition: background linear 0.33s;
+  text-shadow: -1px -1px 1px #aaa, 1px 1px black,
+    0px 4px 1px rgba(236, 236, 236, 0.5), 4px 4px 5px rgba(202, 202, 202, 0.7),
+    0px 0px 7px rgba(0, 0, 0, 0.4);
+  position: relative;
+}
+.character:hover {
+  border: solid 2px white;
+}
 .character:active {
-    background: antiquewhite;
-    opacity: 0.2;
-    transform: translateY(3px);
-    }
-.character > h2, .character > span{
-    font-size: 42px;
-    background-color: transparent;
-    margin: 0;
-    bottom: 8px;
-    left: 16px;
-    position: absolute;
-    text-shadow: -1px -1px 1px #aaa,
-             1px 1px black,
-             0px 4px 1px rgba(236, 236, 236, 0.5),
-             4px 4px 5px rgba(202, 202, 202, 0.7),
-             0px 0px 7px rgba(0,0,0,0.4);
+  background: antiquewhite;
+  opacity: 0.2;
+  transform: translateY(3px);
 }
-.enemy:hover{
-    border: solid 2px red;
-    }
+.character > h2,
+.character > span {
+  font-size: 42px;
+  background-color: transparent;
+  margin: 0;
+  bottom: 8px;
+  left: 16px;
+  position: absolute;
+  text-shadow: -1px -1px 1px #aaa, 1px 1px black,
+    0px 4px 1px rgba(236, 236, 236, 0.5), 4px 4px 5px rgba(202, 202, 202, 0.7),
+    0px 0px 7px rgba(0, 0, 0, 0.4);
+}
+.enemy:hover {
+  border: solid 2px red;
+}
 .enemy:active {
-    background: red;
-    opacity: 0.2;
-    transform: translateY(3px);
-    }
-#attack{
-    font-family: 'Source Sans Pro', sans-serif;
-    font-style: italic;
-    display: inline-block;
-    color: white;
-    background: black;
-    margin: 0px 2px 0px 2px;
-    box-shadow: 0px 3px 8px #43484c;
-    padding: 10px 15px 10px 15px;
-    font-size: 26px;
-    border-radius: 5px 5px 5px 5px;
-    transition: background linear 0.2s;
-    text-shadow: -1px -1px 1px #aaa,
-             1px 1px black,
-             0px 4px 1px rgba(236, 236, 236, 0.5),
-             4px 4px 5px rgba(202, 202, 202, 0.7),
-             0px 0px 7px rgba(0,0,0,0.4);
+  background: red;
+  opacity: 0.2;
+  transform: translateY(3px);
 }
-#attack:hover{
-    border: solid 3px red;
-    }
+#attack {
+  font-family: "Source Sans Pro", sans-serif;
+  font-style: italic;
+  display: inline-block;
+  color: white;
+  background: black;
+  margin: 0px 2px 0px 2px;
+  box-shadow: 0px 3px 8px #43484c;
+  padding: 10px 15px 10px 15px;
+  font-size: 26px;
+  border-radius: 5px 5px 5px 5px;
+  transition: background linear 0.2s;
+  text-shadow: -1px -1px 1px #aaa, 1px 1px black,
+    0px 4px 1px rgba(236, 236, 236, 0.5), 4px 4px 5px rgba(202, 202, 202, 0.7),
+    0px 0px 7px rgba(0, 0, 0, 0.4);
+}
+#attack:hover {
+  border: solid 3px red;
+}
 #attack:active {
-    background: red;
-    transform: translateY(3px);
-    }
-#reset{
-    font-family: 'Source Sans Pro', sans-serif;
-    font-style: italic;
-    display: inline-block;
-    color: white;
-    background: black;
-    margin: 0px 2px 0px 2px;
-    box-shadow: 0px 3px 8px #43484c;
-    padding: 10px 15px 10px 15px;
-    font-size: 30px;
-    border-radius: 5px 5px 5px 5px;
-    transition: background linear 0.2s;
-    text-shadow: -1px -1px 1px #aaa,
-             1px 1px black,
-             0px 4px 1px rgba(236, 236, 236, 0.5),
-             4px 4px 5px rgba(202, 202, 202, 0.7),
-             0px 0px 7px rgba(0,0,0,0.4);
+  background: red;
+  transform: translateY(3px);
 }
-#reset:hover{
-    border: solid 3px whitesmoke;
-    }
+#reset {
+  font-family: "Source Sans Pro", sans-serif;
+  font-style: italic;
+  display: inline-block;
+  color: white;
+  background: black;
+  margin: 0px 2px 0px 2px;
+  box-shadow: 0px 3px 8px #43484c;
+  padding: 10px 15px 10px 15px;
+  font-size: 30px;
+  border-radius: 5px 5px 5px 5px;
+  transition: background linear 0.2s;
+  text-shadow: -1px -1px 1px #aaa, 1px 1px black,
+    0px 4px 1px rgba(236, 236, 236, 0.5), 4px 4px 5px rgba(202, 202, 202, 0.7),
+    0px 0px 7px rgba(0, 0, 0, 0.4);
+}
+#reset:hover {
+  border: solid 3px whitesmoke;
+}
 #reset:active {
-    background: white;
-    transform: translateY(3px);
-    }
-#enemies{
-    border: 1px solid red;
+  background: white;
+  transform: translateY(3px);
 }
-.clear{
-    clear:both;
+.enemies {
+  border: 1px solid red;
 }
-.row{
-    width: auto;
-    float: left;
+.red,
+div > .enemy,
+.enemy > h2 {
+  color: red;
 }
-.red, div > .enemy, .enemy > h2{
-    color: red;
-}
-#winOrLose{
-    font-size: 36px;
-    color: red;
-    text-shadow: -1px -1px 1px #aaa,
-             1px 1px black,
-             0px 4px 1px rgba(236, 236, 236, 0.5),
-             4px 4px 5px rgba(202, 202, 202, 0.7),
-             0px 0px 7px rgba(0,0,0,0.4); 
+#winOrLose {
+  font-size: 36px;
+  color: red;
+  text-shadow: -1px -1px 1px #aaa, 1px 1px black,
+    0px 4px 1px rgba(236, 236, 236, 0.5), 4px 4px 5px rgba(202, 202, 202, 0.7),
+    0px 0px 7px rgba(0, 0, 0, 0.4);
 }
