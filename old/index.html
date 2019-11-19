@@ -13,77 +13,71 @@
     <title>DanganRonpa RPG!</title>
   </head>
   <body>
-    <div class="container">
-      <div class="row">
-        <div>
-          <h2>Your Character</h2>
-          <div class="wrapper">
-            <button class="character select kaede" id="character1" value="0">
-              Kaede Akamatsu<span class="yourhp">100</span>
-            </button>
-            <button class="character select kirumi" id="character2" value="1">
-              Kirumi Tojo<span class="yourhp">120</span>
-            </button>
-            <button class="character select miu" id="character3" value="2">
-              Miu Iruma<span class="yourhp">150</span>
-            </button>
-            <button class="character select monokuma" id="character4" value="3">
-              Monokuma<span class="yourhp">180</span>
-            </button>
-          </div>
-        </div>
-
-        <div id="enemies">
-          <h2 class="red">Enemies</h2>
-          <div class="wrapper enemies">
-            <button class="character enemy kaede" id="enemy0" value="0">
-              Kaede Akamatsu
-              <h2>100</h2>
-            </button>
-            <button class="character enemy kirumi" id="enemy1" value="1">
-              Kirumi Tojo
-              <h2>120</h2>
-            </button>
-            <button class="character enemy miu" id="enemy2" value="2">
-              Miu Iruma
-              <h2>150</h2>
-            </button>
-            <button class="character enemy monokuma" id="enemy3" value="3">
-              Monokuma
-              <h2>180</h2>
-            </button>
-          </div>
-        </div>
-
-        <div id="defenders">
-          <h2>Defender</h2>
-          <div class="wrapper">
-            <button class="character defender kaede" id="defender0" value="0">
-              Kaede Akamatsu<span class="enemyhp">100</span>
-            </button>
-            <button class="character defender kirumi" id="defender1" value="1">
-              Kirumi Tojo<span class="enemyhp">120</span>
-            </button>
-            <button class="character defender miu" id="defender2" value="2">
-              Miu Iruma<span class="enemyhp">150</span>
-            </button>
-            <button
-              class="character defender monokuma"
-              id="defender3"
-              value="3"
-            >
-              Monokuma<span class="enemyhp">180</span>
-            </button>
-          </div>
+    <div class="row">
+      <div>
+        <h2>Your Character</h2>
+        <div class="wrapper">
+          <button class="character select kaede" id="character1" value="0">
+            Kaede Akamatsu<span class="yourhp">100</span>
+          </button>
+          <button class="character select kirumi" id="character2" value="1">
+            Kirumi Tojo<span class="yourhp">120</span>
+          </button>
+          <button class="character select miu" id="character3" value="2">
+            Miu Iruma<span class="yourhp">150</span>
+          </button>
+          <button class="character select monokuma" id="character4" value="3">
+            Monokuma<span class="yourhp">180</span>
+          </button>
         </div>
       </div>
 
-      <div class="center">
-        <h2>Fight Section</h2>
-        <button id="attack">Attack</button>
-        <button id="reset" onClick="window.location.reload()">Reset</button>
-        <p><span id="winOrLose"></span></p>
+      <div id="enemies">
+        <h2 class="red">Enemies</h2>
+        <div class="wrapper enemies">
+          <button class="character enemy kaede" id="enemy0" value="0">
+            Kaede Akamatsu
+            <h2>100</h2>
+          </button>
+          <button class="character enemy kirumi" id="enemy1" value="1">
+            Kirumi Tojo
+            <h2>120</h2>
+          </button>
+          <button class="character enemy miu" id="enemy2" value="2">
+            Miu Iruma
+            <h2>150</h2>
+          </button>
+          <button class="character enemy monokuma" id="enemy3" value="3">
+            Monokuma
+            <h2>180</h2>
+          </button>
+        </div>
       </div>
+
+      <div id="defenders">
+        <h2>Defender</h2>
+        <div class="wrapper">
+          <button class="character defender kaede" id="defender0" value="0">
+            Kaede Akamatsu<span class="enemyhp">100</span>
+          </button>
+          <button class="character defender kirumi" id="defender1" value="1">
+            Kirumi Tojo<span class="enemyhp">120</span>
+          </button>
+          <button class="character defender miu" id="defender2" value="2">
+            Miu Iruma<span class="enemyhp">150</span>
+          </button>
+          <button class="character defender monokuma" id="defender3" value="3">
+            Monokuma<span class="enemyhp">180</span>
+          </button>
+        </div>
+      </div>
+    </div>
+
+    <div class="center">
+      <h2>Fight Section</h2>
+      <button id="attack">Attack</button>
+      <button id="reset" onClick="window.location.reload()">Reset</button>
+      <p><span id="winOrLose"></span></p>
     </div>
   </body>
 </html>

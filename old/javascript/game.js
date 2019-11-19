@@ -22,7 +22,7 @@ $(document).ready(function() {
   $("#defenders").hide();
   $("#reset").hide();
   //on.click starts here for character selection, hides unselected characters.
-  $(".container").on("click", ".select", function() {
+  $(".wrapper").on("click", ".select", function() {
     if (characterSelected) {
       return;
     }
@@ -37,7 +37,7 @@ $(document).ready(function() {
     $(`#enemy${userPick}`).hide();
     $("#winOrLose").text("Select your opponent! Defeat all enemies to win!");
   }); // End of .on(click) function, start enemy selection and hide.
-  $(".container").on("click", ".enemy", function() {
+  $(".enemies").on("click", ".enemy", function() {
     if (enemySelected) {
       return;
     }
