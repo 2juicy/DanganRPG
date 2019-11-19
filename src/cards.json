@@ -1,0 +1,26 @@
+[
+  {
+    "name": "Kaede Akamatsu",
+    "health": 100,
+    "attack": 12,
+    "counter": 5
+  },
+  {
+    "name": "Kirumi Tojo",
+    "health": 120,
+    "attack": 8,
+    "counter": 10
+  },
+  {
+    "name": "Miu Iruma",
+    "health": 150,
+    "attack": 4,
+    "counter": 20
+  },
+  {
+    "name": "Monokuma",
+    "health": 180,
+    "attack": 2,
+    "counter": 25
+  }
+]
