@@ -1,0 +1,63 @@
+.character {
+  height: 250px;
+  width: 225px;
+  border: 0;
+  overflow: hidden;
+  font-family: "Source Sans Pro", sans-serif;
+  font-style: italic;
+  display: inline-block;
+  color: white;
+  margin: 0px 2px 0px 2px;
+  box-shadow: 0px 3px 8px #43484c;
+  font-size: 24px;
+  border-radius: 15px 15px 15px 15px;
+  transition: background linear 0.33s;
+  text-shadow: -1px -1px 1px #aaa, 1px 1px black,
+    0px 4px 1px rgba(236, 236, 236, 0.5), 4px 4px 5px rgba(202, 202, 202, 0.7),
+    0px 0px 7px rgba(0, 0, 0, 0.4);
+  position: relative;
+}
+.character:hover {
+  border: solid 2px white;
+}
+.character:active {
+  background: antiquewhite;
+  opacity: 0.2;
+  transform: translateY(3px);
+}
+.character > h2,
+.character > span {
+  font-size: 42px;
+  background-color: transparent;
+  margin: 0;
+  bottom: 8px;
+  left: 16px;
+  position: absolute;
+  text-shadow: -1px -1px 1px #aaa, 1px 1px black,
+    0px 4px 1px rgba(236, 236, 236, 0.5), 4px 4px 5px rgba(202, 202, 202, 0.7),
+    0px 0px 7px rgba(0, 0, 0, 0.4);
+}
+.enemy:hover {
+  border: solid 2px red;
+}
+.enemy:active {
+  background: red;
+  opacity: 0.2;
+  transform: translateY(3px);
+}
+.kaede {
+  background: rgba(0, 0, 0, 0.66) url(images/Kaede.png) no-repeat;
+  background-position: -3em 1px;
+}
+.kirumi {
+  background: rgba(0, 0, 0, 0.66) url(images/Kirumi.png) no-repeat;
+  background-position: -2em -6px;
+}
+.miu {
+  background: rgba(0, 0, 0, 0.66) url(images/Miu.png) no-repeat;
+  background-position: -2em 1px;
+}
+.monokuma {
+  background: rgba(0, 0, 0, 0.66) url(images/Monokuma.png) no-repeat;
+  background-position: -3em 3px;
+}
