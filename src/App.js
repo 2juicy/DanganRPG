@@ -1,10 +1,11 @@
 import React from "react";
 import "./App.css";
+import Board from "./components/Board/Board";
 
 function App() {
   return (
     <div class="row">
-      <header className="App-header">Making stuff happen</header>
+      <Board />
     </div>
   );
 }

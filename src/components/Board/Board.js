@@ -1,6 +1,6 @@
 import React from "react";
-import "Board.css";
+import "./Board.css";
 
 export default function Board() {
-  return <div></div>;
+  return <div>Making stuff happen</div>;
 }
